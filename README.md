@@ -2,9 +2,9 @@
 
 [[paper]](http://cseweb.ucsd.edu/~mil070/projects/AAAI2020/paper.pdf) [[data]](https://drive.google.com/drive/folders/1X143kUwtRtoPFxNRvUk9LuPlsf1lLKI7?usp=sharing)
 
-MSN is a learning-based shape completion method which can preserve the known structures and generate dense and evenly distributed point clouds. Please refer to our AAAI 2020 [paper](http://cseweb.ucsd.edu/~mil070/projects/AAAI2020/paper.pdf) for more details.
+MSN is a learning-based shape completion method which can preserve the known structures and generate dense and evenly distributed point clouds. See our AAAI 2020 [paper](http://cseweb.ucsd.edu/~mil070/projects/AAAI2020/paper.pdf) for more details.
 
-In this project, we also provide an implementation for Earth Mover's Distance (EMD) of point clouds, which is based on the auction algorithm and only needs $O(n)$ memory.
+In this project, we also provide an implementation for the Earth Mover's Distance (EMD) of point clouds, which is based on the auction algorithm and only needs $O(n)$ memory.
 
 ![](/teaser.png)
 *with 32,768 points after completion*
@@ -33,7 +33,7 @@ Compile our extension modules:
 
 #### 3) Download data and trained models
 
-Download the data and trained models from [here](https://drive.google.com/drive/folders/1X143kUwtRtoPFxNRvUk9LuPlsf1lLKI7?usp=sharing).  We don't provide the partial point cloud for training due to its large size. If you want to train the model, you can generate them with the [code](https://github.com/wentaoyuan/pcn/tree/master/render). We generate 50 partial point clouds for each CAD model.
+Download the data and trained models from [here](https://drive.google.com/drive/folders/1X143kUwtRtoPFxNRvUk9LuPlsf1lLKI7?usp=sharing).  We don't provide the partial point clouds of the training set due to the large size. If you want to train the model, you can generate them with the [code](https://github.com/wentaoyuan/pcn/tree/master/render) and [ShapeNetCore.v1](https://shapenet.org/). We generate 50 partial point clouds for each CAD model.
 
 #### 4) Train or validate
 
