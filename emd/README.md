@@ -1,6 +1,6 @@
 ## Earth Mover's Distance of point clouds
 
-![](/emd/CDEMD.pdf)
+![](/CDEMD.pdf)
 
 Compared to the Chamfer Distance (CD), the Earth Mover's Distance (EMD) is more reliable to distinguish the visual quality of the point clouds. See our [paper](http://cseweb.ucsd.edu/~mil070/projects/AAAI2020/paper.pdf) for more details. 
 
