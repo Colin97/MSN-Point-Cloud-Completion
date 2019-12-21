@@ -12,7 +12,7 @@ In this project, we also provide an implementation for Earth Mover's Distance (E
 
 ### Usage
 
-#### 1) Envrioment & Prerequisites
+#### 1) Envrionment & prerequisites
 
 - Pytorch 1.2.0
 - CUDA 10.0
@@ -31,22 +31,21 @@ Compile our extension modules:
     cd MDS
     python3 setup.py install
 
-#### 3) Download Data and Trained Models
+#### 3) Download data and trained models
 
 Download the data and trained models from [here](https://drive.google.com/drive/folders/1X143kUwtRtoPFxNRvUk9LuPlsf1lLKI7?usp=sharing).  We don't provide the partial point cloud for training due to its large size. If you want to train the model, you can generate them with the [code](https://github.com/wentaoyuan/pcn/tree/master/render). We generate 50 partial point clouds for each CAD model.
 
-#### 4) Train or Val
+#### 4) Train or validate
 
 Run `python3 val.py` to validate the model or `python3 train.py` to train the model from scratch.
 
 ### EMD
 
-We provide an EMD implementation for point cloud comparison, which only needs O(n) memory and thus enables dense point clouds  (with 10,000 points or over) and large batch size. It is based on an approximated algorithm (auction algorithm) and cannot guarantee a bijection assignment. It employs a parameter $\epsilon$ which balances the error rate and the speed of convergence. Smaller $\epsilon$ achieves more accurate results, but with a longer time for convergence. The time complexity is $O(n^2k)$, where $k$ is the number of iterations. We set a $\epsilon = 0.005, k = 50$ during training and a $\epsilon = 0.002, k = 10000$ during testing. Please refer to`emd/README.md` for more details.
+We provide an EMD implementation for point cloud comparison, which only needs $O(n)$ memory and thus enables dense point clouds  (with 10,000 points or over) and large batch size. It is based on an approximated algorithm (auction algorithm) and cannot guarantee a bijection assignment. It employs a parameter $\epsilon$ which balances the error rate and the speed of convergence. Smaller $\epsilon$ achieves more accurate results, but with a longer time for convergence. The time complexity is $O(n^2k)$, where $k$ is the number of iterations. We set a $\epsilon = 0.005, k = 50$ during training and a $\epsilon = 0.002, k = 10000$ during testing. Please refer to`emd/README.md` for more details.
 
 ### Citation
 
 If you find our work useful for your research, please cite:
-
 ```
 @article{liu2019morphing,
   title={Morphing and Sampling Network for Dense Point Cloud Completion},
