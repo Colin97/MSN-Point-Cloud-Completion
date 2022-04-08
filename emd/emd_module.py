@@ -79,11 +79,11 @@ class emdModule(nn.Module):
         return emdFunction.apply(input1, input2, eps, iters)
 
 def test_emd():
-    x1 = torch.rand(20, 8192, 3).cuda()
+    x1 = torch.rand(20, 8192, 3).cuda() # please normalize your point cloud to [0, 1]
     x2 = torch.rand(20, 8192, 3).cuda()
     emd = emdModule()
     start_time = time.perf_counter()
-    dis, assigment = emd(x1, x2, 0.05, 3000)
+    dis, assigment = emd(x1, x2, 0.002, 10000) # 0.005, 50 for training 
     print("Input_size: ", x1.shape)
     print("Runtime: %lfs" % (time.perf_counter() - start_time))
     print("EMD: %lf" % np.sqrt(dis.cpu()).mean())
